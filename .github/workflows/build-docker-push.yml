@@ -1,6 +1,10 @@
 name: 'Reusable Build Docker Image And Push To ECR'
 
-#todo run this workflow on push to master and/ordev branch
+on:
+  push:
+    branches:
+      - dev
+      - master
 
 defaults:
   run:
@@ -11,8 +15,7 @@ jobs:
     name: Build Docker Image And Push To ECR
     runs-on: ubuntu-latest
     outputs:
-        #todo set environment variable called "env" to be used in other tasks
-        #the env can either be dev or prod depending with branch
+      env: ${{ github.event.pull_request.base.ref == 'master' && 'prod' || 'dev' }}
       BUILD_TAG: ${{ steps.set_output.outputs.BUILD_TAG }}
       ECR_REPOSITORY: ${{ steps.set_output.outputs.ECR_REPOSITORY }}
       
@@ -20,7 +23,7 @@ jobs:
       - name: Set environment variables
         run: |
           echo "BUILD_TAG=B${{ github.run_number }}" >> $GITHUB_ENV
-          echo "ECR_REPOSITORY=python-app-repo-$env" >> $GITHUB_ENV
+          echo "ECR_REPOSITORY=python-app-repo-$environment" >> $GITHUB_ENV
       
       - id: set_output
         name: Set Output variables

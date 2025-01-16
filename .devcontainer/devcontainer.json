@@ -1,0 +1,19 @@
+{
+    "name": "DEVOPS-INTERVIEW",
+    "dockerFile": "../Dockerfile",
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "ms-vscode-remote.remote-containers",
+                "ms-azuretools.vscode-docker",
+                "github.vscode-github-actions"
+            ],
+            "settings": {
+                "terminal.integrated.defaultProfile.linux#": "/bin/bash"
+            }
+        }
+    },
+    "runArgs": [
+        "--env-file", ".env"
+    ]
+}

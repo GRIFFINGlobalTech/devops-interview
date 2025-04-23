@@ -29,7 +29,7 @@
    - Highlight key considerations to ensure seamless developer onboarding across different machines.
 
 2. ### Terraform ECR Creation
-   You are tasked with creating an AWS ECR repository for an application using Terraform.
+   You are tasked with creating an AWS ECR repository for the application using Terraform.
    - Write a Terraform configuration file (`ecr.tf`) to provision a basic ECR repository, including essential attributes such as repository name, image scanning configuration, and image tag mutability.
    - Briefly explain how you would secure the repository (e.g., IAM policies, encryption) and organize it for production use (e.g., naming conventions, lifecycle policies).
 

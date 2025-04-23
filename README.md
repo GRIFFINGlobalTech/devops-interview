@@ -23,7 +23,7 @@
    - You are allowed to use intenet resources (Google Search, StackOverflow, etc)
    - You are NOT allowed to use A.I tools e.g ChatGPT, Copilot, Gemini, Grok, etc
 1. ### Devcontainer Setup
-   At Demo Company, a development team has a repository with an existing Dockerfile.
+   The development team has this repository with an existing Dockerfile.
    - As the DevOps Engineer, set up a devcontainer to provide a consistent development environment.
    - Detail the creation of necessary configuration files, integration of the Dockerfile, and inclusion of relevant VS Code extensions.
    - Highlight key considerations to ensure seamless developer onboarding across different machines.

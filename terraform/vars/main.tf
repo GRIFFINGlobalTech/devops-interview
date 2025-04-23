@@ -1,6 +1,6 @@
 
 locals {
   environments = {
-    "development": local.development
+    "development": local.production
   }
 }

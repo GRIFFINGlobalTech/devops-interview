@@ -1,5 +1,5 @@
 # Use Python slim-buster as the base image
-FROM python:3.10-slim-buster
+FROM python:3.10-slim-bullseye
 
 # Set non-interactive mode for installation
 ENV DEBIAN_FRONTEND=noninteractive
@@ -25,4 +25,4 @@ COPY requirements.txt .
 RUN --mount=type=cache,target=/root/.cache/pip pip install --upgrade -r requirements.txt
 
 # The entry point for running the app
-ENTRYPOINT ["python", "src/app.py"]
+ENTRYPOINT ["python", "app.py"]

@@ -12,8 +12,5 @@
                 "terminal.integrated.defaultProfile.linux#": "/bin/bash"
             }
         }
-    },
-    "runArgs": [
-        "--env-file", ".env"
-    ]
+    }
 }

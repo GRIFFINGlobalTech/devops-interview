@@ -5,9 +5,9 @@ variable "environment" {
 
 variable "project" {
   type        = string
-  description = "Project Name"
+  description = "Internal Apps"
 }
 
 variable "application" {
-  description = "Application Name"
+  description = "Python App"
 }

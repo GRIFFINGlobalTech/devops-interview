@@ -1,5 +1,14 @@
 #todo create a ECR repository
-
+resource "aws_ecr_repository" "python_repo" {
+  name                 = "python-app-repo"
+  image_tag_mutability = "MUTABLE"
+  image_scanning_configuration {
+    scan_on_push = true
+  }
+  encryption_configuration {
+    encryption_type = "KMS"
+  }
+}
 
 data "aws_iam_policy_document" "ecr_push_image" {
   statement {

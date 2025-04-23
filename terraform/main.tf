@@ -5,11 +5,8 @@ provider "aws" {
   region  = "us-east-1"
 }
 
-#
 # Fetch variables based on Environment
-#
-
-module "vars_dev" {
+module "vars_prod" {
   source      = "./vars"
-  environment = "dev"
+  environment = "prod"
 }

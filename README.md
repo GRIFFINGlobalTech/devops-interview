@@ -3,11 +3,14 @@
 ## Prerequisites
 - Visual Studio Code
 - Docker
+- Terraform
+- AWS CLI (configured with appropriate credentials)
+- GitHub account with access to GitHub Actions
 
 ## Instructions
 1. Clone the repository:
     ```sh
-    git clone GRIFFINGlobalTech/devops-interview
+    git clone https://github.com/GRIFFINGlobalTech/devops-interview.git
     cd devops-interview
     ```
 
@@ -15,15 +18,22 @@
     ```sh
     code .
     ```
-3. Create a `.env` file with contents from the `env_template`
-- Update this file with your actual aws credentials - Even the aws trial account should work
 
-4. Reopen the folder in a Dev Container:
-    - Press `F1` and select `Remote-Containers: Reopen in Container`.
+## Tasks
+   - You are allowed to use intenet resources (Google Search, StackOverflow, etc)
+   - You are NOT allowed to use A.I tools e.g ChatGPT, Copilot, Gemini, Grok, etc
+1. ### Devcontainer Setup
+   At Demo Company, a development team has a repository with an existing Dockerfile.
+   - As the DevOps Engineer, set up a devcontainer to provide a consistent development environment.
+   - Detail the creation of necessary configuration files, integration of the Dockerfile, and inclusion of relevant VS Code extensions.
+   - Highlight key considerations to ensure seamless developer onboarding across different machines.
 
-5. Run the application:
-    ```sh
-    python app.py
-    ```
+2. ### Terraform ECR Creation
+   You are tasked with creating an AWS ECR repository for an application using Terraform.
+   - Write a Terraform configuration file (`ecr.tf`) to provision a basic ECR repository, including essential attributes such as repository name, image scanning configuration, and image tag mutability.
+   - Briefly explain how you would secure the repository (e.g., IAM policies, encryption) and organize it for production use (e.g., naming conventions, lifecycle policies).
 
-6. Open your browser and navigate to `http://localhost:5000` to view the app.
+3. ### GitHub Actions for ECR Creation on PR to Main
+   Design a GitHub Actions workflow that triggers on a pull request to the `master` branch to create an AWS ECR repository using Terraform.
+   - Provide a concise YAML configuration for the workflow - `pull-request.yml`, including steps for AWS authentication and running Terraform to provision the ECR repository.
+   - Briefly explain how you would secure the workflow (e.g., secret management) and ensure reliability.

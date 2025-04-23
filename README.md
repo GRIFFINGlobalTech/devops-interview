@@ -14,7 +14,12 @@
     cd devops-interview
     ```
 
-2. Open the repository in Visual Studio Code:
+2. Create a new branch with your name:
+    ```sh
+    git checkout -b <firstname_lastname>
+    ```
+
+3. Open the repository in Visual Studio Code:
     ```sh
     code .
     ```
